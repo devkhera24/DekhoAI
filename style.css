@@ -1,0 +1,234 @@
+/* Font style */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #5b00d1, #a100ff, rgb(220, 156, 255));
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar */
+header {
+  background: black;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #a855f7;
+}
+
+/* Container */
+.auth-container {
+  position: relative;
+  width: 700px;
+  margin: auto;
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+/* Common form box */
+.form-box {
+  width: 50%;
+  padding: 40px;
+  border-radius: 10px;
+  z-index: 1;
+  text-align: center;
+  transition: 0.5s;
+}
+
+/* Login box (black) */
+.form-box.login {
+  background: black;
+  color: white;
+}
+
+.form-box.login h2,
+.form-box.login .form-title {
+  color: white;
+}
+
+.form-box.login input {
+  background: #222;
+  border: none;
+  color: white;
+}
+
+.form-box.login input::placeholder {
+  color: #bbb;
+}
+
+/* SignUp box (white) */
+.form-box.signup {
+  background: white;
+  color: black;
+}
+
+.form-box.signup h2 {
+  color: #5b00d1;
+}
+
+.form-box.signup .form-title {
+  color: #333;
+}
+
+/* Inputs */
+.form-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.form-box button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: linear-gradient(to right, #6d28d9, #a855f7);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-box button:hover {
+  opacity: 0.85;
+}
+
+.form-box .switch {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.form-box .switch a {
+  color: #a855f7;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Overlay (black sliding background) */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: black;
+  border-radius: 10px;
+  z-index: 0;
+  transition: 0.5s ease-in-out;
+}
+
+/* When active -> move overlay to right */
+.auth-container.signup-mode .overlay {
+  left: 50%;
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+  background: black;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-weight: 600;
+}
+/* Default login black */
+.form-box.login {
+  background: black;
+  color: white;
+  transition: 0.5s ease;
+}
+
+.form-box.signup {
+  background: white;
+  color: black;
+  transition: 0.5s ease;
+}
+
+/* When signup is active */
+.auth-container.signup-mode .form-box.signup {
+  background: black;
+  color: white;
+}
+
+.auth-container.signup-mode .form-box.signup h2,
+.auth-container.signup-mode .form-box.signup .form-title {
+  color: white;
+}
+
+.auth-container.signup-mode .form-box.signup input {
+  background: #222;
+  border: none;
+  color: white;
+}
+
+.auth-container.signup-mode .form-box.signup input::placeholder {
+  color: #bbb;
+}
+
+/* At the same time, reset login box to white when signup active */
+.auth-container.signup-mode .form-box.login {
+  background: white;
+  color: black;
+}
+.auth-container .form-box.login .Dekho{
+  color: #a855f7;
+}
+.auth-container .form-box.login .form-title{
+  color: #a855f7;
+}
+footer ul li a{
+  color: white;
+}
+footer ul li a:hover {
+  color: #a855f7;
+}
+.auth-container {
+  margin-top: 150px; /* instead of on individual boxes */
+}
+
+

@@ -1,0 +1,104 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Background Gradient */
+body {
+  background: linear-gradient(135deg, #6a11cb, #8e2de2);
+  color: white;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  background: black;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.nav-links li a.active,
+.nav-links li a:hover {
+  color: #d6b8ff;
+}
+
+/* About Section */
+.about {
+  text-align: center;
+  padding: 70px 20px 40px;
+}
+.about h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+.about .subtitle {
+  font-size: 18px;
+  opacity: 0.9;
+  margin-bottom: 40px;
+}
+.about-box {
+  max-width: 800px;
+  margin: auto;
+  background: rgba(0,0,0,0.6);
+  padding: 30px;
+  border-radius: 15px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Objectives */
+.objectives {
+  text-align: center;
+  margin: 60px 20px;
+}
+.objectives h2 {
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+.card {
+  background: black;
+  padding: 20px;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: scale(1.05);
+  background: #222;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0,0,0,0.8);
+  margin-top: 40px;
+  border-top: 2px solid #d6b8ff;
+}
